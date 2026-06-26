@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>经历 · 池孟轩</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-head{ padding:48px 0 8px; }
+  .page-head h1{ font-size:clamp(28px,4vw,38px); font-weight:800; margin-bottom:10px; }
+  .page-head p{ color:var(--ink-soft); max-width:620px; }
+
+  .filter-row{ display:flex; gap:10px; margin:32px 0 36px; flex-wrap:wrap; }
+  .filter-btn{
+    font-family:var(--mono); font-size:13px; font-weight:500; padding:9px 18px; border-radius:999px;
+    border:1px solid var(--border); background:var(--bg-elevated); color:var(--ink-soft); cursor:pointer;
+    transition:all .2s var(--ease);
+  }
+  .filter-btn:hover{ border-color:var(--accent); color:var(--accent-text); }
+  .filter-btn.active{ background:var(--accent); color:#06231A; border-color:var(--accent); font-weight:700; }
+
+  .entry{
+    display:grid; grid-template-columns:160px 1fr; gap:28px; padding:30px 0; border-top:1px solid var(--border-soft);
+  }
+  .entry:first-of-type{ border-top:none; }
+  @media (max-width:680px){ .entry{ grid-template-columns:1fr; gap:10px; } }
+  .entry-date{ font-family:var(--mono); font-size:12.5px; color:var(--ink-faint); padding-top:3px; }
+  .entry-badge{
+    display:inline-flex; margin-top:8px; font-size:11px; font-weight:700; padding:3px 10px; border-radius:999px;
+  }
+  .badge-work{ background:var(--accent-soft); color:var(--accent-text); }
+  .badge-proj{ background:var(--accent-2-soft); color:var(--accent-2); }
+
+  .entry-card{ background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--radius-md); padding:24px 26px; transition:all .25s var(--ease); }
+  .entry-card:hover{ border-color:var(--accent); box-shadow:var(--shadow-md); }
+  .entry-role{ font-family:var(--serif); font-weight:800; font-size:18.5px; margin-bottom:2px; }
+  .entry-org{ color:var(--accent-text); font-weight:600; font-size:14px; margin-bottom:4px; }
+  .entry-meta{ font-size:12.5px; color:var(--ink-faint); margin-bottom:14px; font-style:italic; }
+  .entry-list{ list-style:none; display:flex; flex-direction:column; gap:9px; }
+  .entry-list li{ position:relative; padding-left:18px; font-size:14px; color:var(--ink-soft); }
+  .entry-list li::before{ content:"›"; position:absolute; left:0; top:0; color:var(--accent); font-weight:700; }
+  .entry-list li b{ color:var(--ink); font-weight:600; }
+  .entry-desc{ font-size:14px; color:var(--ink-soft); }
+</style>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">池</span>池孟轩</a>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+      <div class="navlinks" id="navLinks">
+        <a href="index.html">首页</a>
+        <a href="experience.html" class="active">经历</a>
+        <a href="about.html">关于我</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-btn" id="themeToggle" aria-label="切换主题">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <div class="page-head reveal">
+      <div class="eyebrow">work history & projects</div>
+      <h1>工作经历与项目</h1>
+      <p>4年医疗大模型数据质控实战，12年中医临床积累。下面按时间合并展示工作经历与重点项目。</p>
+    </div>
+
+    <div class="filter-row reveal">
+      <button class="filter-btn active" data-filter="all">全部</button>
+      <button class="filter-btn" data-filter="work">工作经历</button>
+      <button class="filter-btn" data-filter="proj">大模型 / 项目</button>
+    </div>
+
+    <div id="entries">
+
+      <div class="entry" data-category="work">
+        <div class="entry-date">2021.05 — 至今<div class="entry-badge badge-work">工作经历</div></div>
+        <div class="entry-card">
+          <div class="entry-role">医学质控管理经理</div>
+          <div class="entry-org">抖音集团</div>
+          <div class="entry-meta">互联网公司 · 10000人以上 · 汇报对象：管理者</div>
+          <ul class="entry-list">
+            <li><b>构建评测体系：</b>基于临床医学专业判断，搭建医学队列数据多维度质控标准与评估体系，审核质量把控率达100%，确保数据真实合规。</li>
+            <li><b>设计优化策略：</b>主导审核流程优化，通过交叉核验、关键节点复核定位模型短板与数据偏差来源，显著降低数据误差率。</li>
+            <li><b>建设高质量数据：</b>主导医疗大模型工作流搭建，基于扣子（Coze）平台构建医学规则导入与AI批量审核流程，替代纯人工筛选模式；建立多维度数据校正体系，对万条级医疗视频数据进行专业校验与修正。</li>
+            <li><b>模型训练与验证：</b>将校正后的标准化数据用于AI医疗识别模型训练优化，并通过模型预测结果与人工临床审核结果的双向比对，验证模型识别的科学性与边界。</li>
+            <li><b>方法论沉淀：</b>编制审核培训教材，覆盖团队200+成员，将个人专业判断转化为团队可执行、可复制的评估规范。</li>
+            <li><b>多模型横向评测：</b>日常使用Claude、豆包、千问、DeepSeek、MiniMax、Codex、Kimi等多款主流大模型进行医学问答测试与对比，归纳共性问题与优化方向。</li>
+            <li>参与招聘面试与候选人专业能力评估筛选，并牵头初期团队管理，制定任务分配与协作机制。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry" data-category="proj">
+        <div class="entry-date">2021.05 — 至今<div class="entry-badge badge-proj">大模型项目</div></div>
+        <div class="entry-card">
+          <div class="entry-role">抖音医疗大模型工作流搭建与应用</div>
+          <div class="entry-org">医学质控管理经理 · 抖音集团</div>
+          <div class="entry-desc">针对医疗视频大模型审核问题，借扣子工作流导入并筛选专属规则，搭建流程实现AI批量审核，替代人工；再建多维度校正体系修正数据偏差；随后用标准化数据优化AI模型训练，双向比对验证科学性，最终形成手册复用，提升效率支撑临床应用。</div>
+        </div>
+      </div>
+
+      <div class="entry" data-category="work">
+        <div class="entry-date">2015.04 — 2021.05<div class="entry-badge badge-work">工作经历</div></div>
+        <div class="entry-card">
+          <div class="entry-role">中医师</div>
+          <div class="entry-org">北京同仁堂（北京）</div>
+          <div class="entry-meta">国企 · 10000人以上 · 汇报对象：院长</div>
+          <ul class="entry-list">
+            <li>对患者进行四诊合参、辨证施治，将诊疗与养生方案相结合，针对亚健康状态人群提供个性化调理方案，年接诊量大、临床判断准确率高。</li>
+            <li>受邀为中国银行、中粮集团、可口可乐等企业客户提供私人医疗定制化服务，并担任《逸品健康》杂志中医顾问及同仁堂线上平台中医内容策划顾问。</li>
+            <li>承担店内员工养生培训与医学知识培训，协助制订营销方案的数据收集、筛选与分析总结。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry" data-category="proj">
+        <div class="entry-date">2017.05 — 2021.05<div class="entry-badge badge-proj">项目</div></div>
+        <div class="entry-card">
+          <div class="entry-role">中医智能医疗软件合作研发</div>
+          <div class="entry-org">中医总监 · 科技公司</div>
+          <div class="entry-desc">主导中医人工智能医疗软件的架构与功能规划设计，将中医辨证逻辑转化为产品功能需求，推动中医远程医疗与远端网络服务相辅相成，形成新型态中医医疗服务模式。</div>
+        </div>
+      </div>
+
+      <div class="entry" data-category="proj">
+        <div class="entry-date">2015.04 — 2021.05<div class="entry-badge badge-proj">项目</div></div>
+        <div class="entry-card">
+          <div class="entry-role">私人医疗定制化服务 / 同仁堂线上平台中医顾问</div>
+          <div class="entry-org">中医专家 · 同仁堂</div>
+          <div class="entry-desc">与中国银行、中粮集团、可口可乐等公司对接私人医疗养生项目，依据患者身体状况调配中药及健康提醒方案；同时为同仁堂线上平台中医内容进行策划，并担任《逸品健康》杂志中医顾问，撰写专业科普内容。</div>
+        </div>
+      </div>
+
+      <div class="entry" data-category="work">
+        <div class="entry-date">2014.05 — 2015.04<div class="entry-badge badge-work">工作经历</div></div>
+        <div class="entry-card">
+          <div class="entry-role">中医师</div>
+          <div class="entry-org">固生堂中医医院（北京）</div>
+          <div class="entry-meta">民营 · 2000人以上 · 汇报对象：院长</div>
+          <ul class="entry-list">
+            <li>对患者进行把脉会诊，开展中医疾病诊断、用药咨询及"治未病"预防知识讲座，精通中药配伍与中药养生、食疗方案设计。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry" data-category="work">
+        <div class="entry-date">2013.03 — 2014.04<div class="entry-badge badge-work">工作经历</div></div>
+        <div class="entry-card">
+          <div class="entry-role">中医师</div>
+          <div class="entry-org">广惠康中医诊所（北京）</div>
+          <div class="entry-meta">民营 · 1000人以上</div>
+          <ul class="entry-list">
+            <li>提供把脉会诊与亚健康诊疗调理服务，开展中医疾病诊断、用药咨询与养生讲座。</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="entry" data-category="proj">
+        <div class="entry-date">2014 — 2015<div class="entry-badge badge-proj">项目</div></div>
+        <div class="entry-card">
+          <div class="entry-role">北京协和医院联合培训项目</div>
+          <div class="entry-org">北京中医药大学 × 北京协和医院</div>
+          <div class="entry-desc">作为联合培训中医研究生赴协和医院进行中医临床诊疗培训，参与跨体系医学诊疗规范的比较与学习。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="f-left">© 池孟轩 · 个人简历网站</div>
+      <div class="f-links">
+        <a href="index.html">首页</a>
+        <a href="experience.html">经历</a>
+        <a href="about.html">关于我</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
