@@ -1,15 +1,15 @@
-<<!DOCTYPE html>
-  <html lang="zh-CN">
-  <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>关于我 · 池孟轩</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <style>
-    .page-head{ padding:48px 0 8px; }
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于我 · 池孟轩</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800;900&family=Manrope:wght@500;700;800&family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .page-head{ padding:48px 0 8px; }
   .page-head h1{ font-size:clamp(28px,4vw,38px); font-weight:800; margin-bottom:10px; }
   .page-head p{ color:var(--ink-soft); max-width:620px; }
 
@@ -17,9 +17,9 @@
   @media (max-width:760px){ .two-col{ grid-template-columns:1fr; gap:36px; } }
 
   .edu-item{
-        display:flex; justify-content:space-between; align-items:baseline; gap:14px;
+    display:flex; justify-content:space-between; align-items:baseline; gap:14px;
     padding:16px 0; border-top:1px solid var(--border-soft);
-}
+  }
   .edu-item:first-of-type{ border-top:none; }
   .edu-item .deg{ font-weight:700; font-size:15px; }
   .edu-item .school{ font-size:13px; color:var(--ink-soft); }
@@ -27,26 +27,27 @@
 
   .cert-grid{ display:flex; flex-direction:column; gap:10px; }
   .cert-card{
-        display:flex; align-items:center; gap:14px; padding:14px 16px; background:var(--bg-elevated);
+    display:flex; align-items:center; gap:14px; padding:14px 16px; background:var(--bg-elevated);
     border:1px solid var(--border); border-radius:var(--radius-sm); transition:all .2s var(--ease);
-}
+  }
   .cert-card:hover{ border-color:var(--accent); transform:translateX(4px); }
   .cert-ico{
-        width:34px; height:34px; border-radius:9px; background:var(--accent-soft); color:var(--accent-text);
+    width:34px; height:34px; border-radius:9px; background:var(--accent-soft); color:var(--accent-text);
     display:flex; align-items:center; justify-content:center; flex:none;
-}
+  }
   .cert-card span.t{ font-size:13.5px; font-weight:500; }
 
   .note-card{ background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--radius-md); padding:22px 24px; margin-bottom:14px; }
   .note-card .nt{ font-family:var(--mono); font-size:11.5px; color:var(--accent-text); text-transform:uppercase; letter-spacing:.08em; margin-bottom:8px; }
   .note-card p{ font-size:14px; color:var(--ink-soft); }
 
-  .contact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+  /* contact */
+  .contact-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:14px; max-width:600px; }
   @media (max-width:760px){ .contact-grid{ grid-template-columns:1fr; } }
   .contact-card{
-        background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--radius-md);
+    background:var(--bg-elevated); border:1px solid var(--border); border-radius:var(--radius-md);
     padding:24px; display:flex; flex-direction:column; gap:10px; cursor:pointer; transition:all .25s var(--ease);
-}
+  }
   .contact-card:hover{ border-color:var(--accent); transform:translateY(-3px); box-shadow:var(--shadow-md); }
   .contact-card .cico{
     width:38px; height:38px; border-radius:10px; background:var(--accent-soft); color:var(--accent-text);
@@ -56,154 +57,145 @@
   .contact-card .cval{ font-size:15px; font-weight:600; }
   .contact-card .copy-label{ font-size:11.5px; color:var(--accent-text); font-weight:600; }
 </style>
-  </head>
-  <body>
+</head>
+<body>
 
-    <nav class="nav">
-      <div class="nav-inner">
-        <a href="index.html" class="brand"><span class="brand-mark">池</span>池孟轩</a>
-        <button class="nav-toggle" id="navToggle" aria-label="菜单">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="brand"><span class="brand-mark">池</span>池孟轩</a>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+      </button>
+      <div class="navlinks" id="navLinks">
+        <a href="index.html">首页</a>
+        <a href="experience.html">经历</a>
+        <a href="about.html" class="active">关于我</a>
+      </div>
+      <div class="nav-right">
+        <button class="theme-btn" id="themeToggle" aria-label="切换主题">
+          <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+          <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         </button>
-        <div class="navlinks" id="navLinks">
-          <a href="index.html">首页</a>
-          <a href="experience.html">经历</a>
-          <a href="about.html" class="active">关于我</a>
-        </div>
-        <div class="nav-right">
-          <button class="theme-btn" id="themeToggle" aria-label="切换主题">
-            <svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
-            <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
-          </button>
-        </div>
       </div>
-    </nav>
+    </div>
+  </nav>
 
-    <div class="wrap">
-      <div class="page-head reveal">
-        <div class="eyebrow">about</div>
-        <h1>教育、证照与联系方式</h1>
-        <p>北京中医药大学本硕博一贯制专业训练，持有五项权威中医执业资质，欢迎联系交流。</p>
-      </div>
-
-      <section>
-        <div class="two-col">
-          <div class="reveal">
-            <h2 class="sec-title" style="font-size:20px;">教育背景</h2>
-            <div class="edu-item">
-              <div><div class="deg">中医临床基础 · 博士</div><div class="school">北京中医药大学</div></div>
-              <div class="yr">2010.09–2015.07</div>
-            </div>
-            <div class="edu-item">
-              <div><div class="deg">中医基础理论 · 硕士</div><div class="school">北京中医药大学</div></div>
-              <div class="yr">2006.09–2009.07</div>
-            </div>
-            <div class="edu-item">
-              <div><div class="deg">中医系 · 本科</div><div class="school">北京中医药大学</div></div>
-              <div class="yr">2001.09–2006.07</div>
-            </div>
-          </div>
-
-          <div class="reveal">
-            <h2 class="sec-title" style="font-size:20px;">专业证照</h2>
-            <div class="cert-grid">
-              <div class="cert-card">
-                <div class="icon-badge c-green" style="width:34px;height:34px;border-radius:9px;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-                </div>
-                <span class="t">中华人民共和国中医师执业资格</span>
-              </div>
-              <div class="cert-card">
-                <div class="icon-badge c-amber" style="width:34px;height:34px;border-radius:9px;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-                </div>
-                <span class="t">国际中医医师资格（A级）</span>
-              </div>
-              <div class="cert-card">
-                <div class="icon-badge c-teal" style="width:34px;height:34px;border-radius:9px;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
-                </div>
-                <span class="t">国际针灸医师资格（A级）</span>
-              </div>
-              <div class="cert-card">
-                <div class="icon-badge c-coral" style="width:34px;height:34px;border-radius:9px;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-                </div>
-                <span class="t">卫生部认证中医针灸师</span>
-              </div>
-              <div class="cert-card">
-                <div class="icon-badge c-green" style="width:34px;height:34px;border-radius:9px;">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
-                </div>
-                <span class="t">保健按摩师（高级）</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section style="padding-top:0;">
-        <h2 class="sec-title reveal" style="font-size:20px;">专业积累与进修经历</h2>
-        <div class="reveal">
-          <div class="note-card">
-            <div class="nt">专长方向</div>
-            <p>中医内科专业专长；熟悉中医诊所自费项目及配套规划实务、中药材品项鉴别炮制管理、中医药产品配方研发及调剂加工。</p>
-          </div>
-          <div class="note-card">
-            <div class="nt">系统进修</div>
-            <p>先后于北京中医药大学附属东直门医院（轮转2年）、西苑医院（临床培训1年）、护国寺中医院（进修6个月）、北京协和医院（联合培训1年）、天津中医药大学（针灸研修）等系统进修，并跟随肾科名家彭建中教授（2年）、协和医院徐慧媛教授（1年）、中医名家王新佩教授（3年）学习。</p>
-          </div>
-          <div class="note-card">
-            <div class="nt">临床擅长</div>
-            <p>肩颈腰背酸痛、支气管炎、泌尿系感染、胆囊炎、肠胃炎、风湿性关节炎、头痛眩晕、失眠、情志性疾病、月经不调、不孕不育等病证的中西医结合诊疗。</p>
-          </div>
-        </div>
-      </section>
-
-      <section style="padding-top:0;">
-        <h2 class="sec-title reveal" style="font-size:20px;">联系方式</h2>
-        <p class="sec-sub reveal" style="margin-bottom:24px;">点击卡片即可复制对应信息。</p>
-        <div class="contact-grid reveal">
-          <div class="contact-card" data-copy="18510304679">
-            <div class="cico">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div class="clabel">电话</div>
-            <div class="cval">185 1030 4679</div>
-            <div class="copy-label">点击复制</div>
-          </div>
-          <div class="contact-card" data-copy="vcm70@hotmail.com">
-            <div class="cico">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-            </div>
-            <div class="clabel">邮箱</div>
-            <div class="cval" style="font-size:13.5px;">vcm70@hotmail.com</div>
-            <div class="copy-label">点击复制</div>
-          </div>
-          <div class="contact-card" data-copy="北京（意向：杭州/北京">
-            <div class="cico">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div class="clabel">现居 / 意向地</div>
-            <div class="cval" style="font-size:14px;">北京 · 杭州/北京</div>
-            <div class="copy-label">点击复制</div>
-          </div>
-        </div>
-      </section>
+  <div class="wrap">
+    <div class="page-head reveal">
+      <div class="eyebrow">about</div>
+      <h1>教育、证照与联系方式</h1>
+      <p>北京中医药大学本硕博一贯制专业训练，持有五项权威中医执业资质，欢迎联系交流。</p>
     </div>
 
-    <footer>
-      <div class="wrap">
-        <div class="f-left">© 池孟轩 · 个人简历网站</div>
-        <div class="f-links">
-          <a href="index.html">首页</a>
-          <a href="experience.html">经历</a>
-          <a href="about.html">关于我</a>
+    <section>
+      <div class="two-col">
+        <div class="reveal">
+          <h2 class="sec-title" style="font-size:20px;">教育背景</h2>
+          <div class="edu-item">
+            <div><div class="deg">中医临床基础 · 博士</div><div class="school">北京中医药大学</div></div>
+            <div class="yr">2010.09–2015.07</div>
+          </div>
+          <div class="edu-item">
+            <div><div class="deg">中医基础理论 · 硕士</div><div class="school">北京中医药大学</div></div>
+            <div class="yr">2006.09–2009.07</div>
+          </div>
+          <div class="edu-item">
+            <div><div class="deg">中医系 · 本科</div><div class="school">北京中医药大学</div></div>
+            <div class="yr">2001.09–2006.07</div>
+          </div>
+        </div>
+
+        <div class="reveal">
+          <h2 class="sec-title" style="font-size:20px;">专业证照</h2>
+          <div class="cert-grid">
+            <div class="cert-card">
+              <div class="icon-badge c-green" style="width:34px;height:34px;border-radius:9px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <span class="t">中华人民共和国中医师执业资格</span>
+            </div>
+            <div class="cert-card">
+              <div class="icon-badge c-amber" style="width:34px;height:34px;border-radius:9px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+              </div>
+              <span class="t">国际中医医师资格（A级）</span>
+            </div>
+            <div class="cert-card">
+              <div class="icon-badge c-teal" style="width:34px;height:34px;border-radius:9px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z"/></svg>
+              </div>
+              <span class="t">国际针灸医师资格（A级）</span>
+            </div>
+            <div class="cert-card">
+              <div class="icon-badge c-coral" style="width:34px;height:34px;border-radius:9px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <span class="t">卫生部认证中医针灸师</span>
+            </div>
+            <div class="cert-card">
+              <div class="icon-badge c-green" style="width:34px;height:34px;border-radius:9px;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" style="width:17px;height:17px;"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+              </div>
+              <span class="t">保健按摩师（高级）</span>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
+    </section>
 
-  <script src="script.js"></script>
-  </body>
-  </html>
-  
+    <section style="padding-top:0;">
+      <h2 class="sec-title reveal" style="font-size:20px;">专业积累与进修经历</h2>
+      <div class="reveal">
+        <div class="note-card">
+          <div class="nt">专长方向</div>
+          <p>中医内科专业专长；熟悉中医诊所自费项目及配套规划实务、中药材品项鉴别炮制管理、中医药产品配方研发及调剂加工。</p>
+        </div>
+        <div class="note-card">
+          <div class="nt">系统进修</div>
+          <p>先后于北京中医药大学附属东直门医院（轮转2年）、西苑医院（临床培训1年）、护国寺中医院（进修6个月）、北京协和医院（联合培训1年）、天津中医药大学（针灸研修）等系统进修，并跟随肾科名家彭建中教授（2年）、协和医院徐慧媛教授（1年）、中医名家王新佩教授（3年）学习。</p>
+        </div>
+        <div class="note-card">
+          <div class="nt">临床擅长</div>
+          <p>肩颈腰背酸痛、支气管炎、泌尿系感染、胆囊炎、肠胃炎、风湿性关节炎、头痛眩晕、失眠、情志性疾病、月经不调、不孕不育等病证的中西医结合诊疗。</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding-top:0;">
+      <h2 class="sec-title reveal" style="font-size:20px;">联系方式</h2>
+      <p class="sec-sub reveal" style="margin-bottom:24px;">点击卡片即可复制对应信息。</p>
+      <div class="contact-grid reveal">
+        <div class="contact-card" data-copy="vcm70@hotmail.com">
+          <div class="cico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" opacity="0"/><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          </div>
+          <div class="clabel">邮箱</div>
+          <div class="cval" style="font-size:13.5px;">vcm70@hotmail.com</div>
+          <div class="copy-label">点击复制</div>
+        </div>
+        <div class="contact-card" data-copy="北京（意向：杭州/北京）">
+          <div class="cico">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="clabel">现居 / 意向地</div>
+          <div class="cval" style="font-size:14px;">北京 · 杭州/北京</div>
+          <div class="copy-label">点击复制</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <div class="f-left">© 池孟轩 · 个人简历网站</div>
+      <div class="f-links">
+        <a href="index.html">首页</a>
+        <a href="experience.html">经历</a>
+        <a href="about.html">关于我</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
